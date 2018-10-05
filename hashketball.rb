@@ -82,11 +82,10 @@ def player_numbers(team_name)
 end
       
 def player_stats(player_name)
-  stats = nil
   game_hash.each do |location, team_data|
     team_data[:players].each do |player, stat|
       if player == player_name
-        stats = stat
+        stat
       end
     end
   end
