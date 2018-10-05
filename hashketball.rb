@@ -58,5 +58,5 @@ def team_colors(team_name)
       team_color_array << team_data[:colors]
     end
   end
-  team_color_array.flatten
+  team_color_array
 end
