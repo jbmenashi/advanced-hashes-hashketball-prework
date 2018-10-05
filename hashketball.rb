@@ -81,3 +81,12 @@ def player_numbers(team_name)
   team_numbers_array
 end
       
+def player_stats(player_name)
+  game_hash.each do |location, team_data|
+    team_data[:players].each do |player, stat|
+      if player == player_name
+        game_hash[location][team_data][:players][player]
+      end
+    end
+  end
+end
