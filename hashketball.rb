@@ -68,3 +68,16 @@ def team_names
   end
   team_names_array
 end
+
+def player_numbers(team_name)
+  team_numbers_array = []
+  game_hash.each do |location, team_data|
+    if team_data[:team_name] == team_name
+      team_data[:players].each do |player, stat|
+        team_numbers_array << stat[:number]
+      end
+    end
+  end
+  team_numbers_array
+end
+      
